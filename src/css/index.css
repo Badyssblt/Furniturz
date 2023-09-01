@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+    background-color: #121212;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}

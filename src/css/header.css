@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: flex-end;
+}
+
+li {
+    color: white;
+    list-style-type: none;
+    font-family: 'Raleway';
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+{
+    "name": "badyss/ecommerce",
+    "description": "Une application ecommerce simple",
+    "require": {
+        "stripe/stripe-php": "^12.0",
+        "altorouter/altorouter": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Badyss\\Ecommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Miro",
+            "email": "badyss.blt@gmail.com"
+        }
+    ]
+}
