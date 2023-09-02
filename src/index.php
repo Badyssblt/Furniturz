@@ -13,8 +13,12 @@
         <?php
     });
 
-    $router->map('GET', '/signup', function(){
-        echo "S'enregistrer";
+    $router->map('GET', '/signup', function(){ ?>
+    <main>
+        <?php require('./components/signinForm.php'); ?>
+    </main>
+
+    <?php
     });
 
 
