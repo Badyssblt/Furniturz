@@ -1,0 +1,12 @@
+.topbar {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.topbar li {
+    color: white;
+    font-family: 'Roboto';
+    list-style-type: none;
+}
+
