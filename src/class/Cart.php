@@ -7,6 +7,11 @@ class Cart{
         $this->database = $db;
     }
 
+    public function getCart($userID) {
+        $cart = $this->database->query("SELECT * FROM cart WHERE userID = '$userID' ");
+        return $cart;
+    }
+
     public function add($product_id, $user_id){
         $exist = $this->database->query("SELECT * FROM cart WHERE productID = '$product_id' AND userID = $user_id");
         if(empty($exist)){

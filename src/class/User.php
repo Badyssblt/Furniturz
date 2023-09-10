@@ -8,9 +8,9 @@ class User {
         $this->database = $db;
     }
 
-    public function Register($name, $email, $password){
-        $sql = "INSERT INTO users VALUES (0, :name, :email, :password)";
-        $params = array("name" => $name, "email" => $email, "password" => $password);
+    public function Register($name, $surname, $email, $password){
+        $sql = "INSERT INTO users VALUES (0, :name, :surname, :email, :password)";
+        $params = array("name" => $name, "surname" => $surname, "email" => $email, "password" => $password);
         $account = $this->database->create($sql, $params); 
     }
 

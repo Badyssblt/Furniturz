@@ -5,6 +5,6 @@
     $user = new User($db);
     extract($_POST);
     $password = password_hash($password, PASSWORD_DEFAULT);
-    $user->Register($name, $email, $password);
-    header("Location: /index.php");
+    $user->Register($name, $surname, $email,$password);
+    header("Location: /signin");
 ?>

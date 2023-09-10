@@ -16,6 +16,7 @@ class Product {
 
     public function getSingleProduct($id){
         $singleProduct = $this->database->query("SELECT * FROM products WHERE ID = " . $id);
+        return $singleProduct;
     }
 
     public function getProductByName($name){

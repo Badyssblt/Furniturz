@@ -1,0 +1,94 @@
+.signin__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.side__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 600px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.side__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+    height: 600px;
+    background: #7DA075;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.side__content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.side__form {
+    display: flex;
+    flex-direction: column;
+    width: 222px;
+    gap: 20px;
+}
+
+
+
+.side__input {
+    font-family: 'Poppins';
+    width: 200px;
+    height: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+
+
+.side__form input::placeholder {
+    opacity: 0.3;
+    font-family: 'Poppins';
+    color: white;
+}
+
+
+label {
+    font-family: 'Poppins';
+    color: white;
+    opacity: 0.3;
+    font-size: .9em;
+    font-weight: lighter;
+}
+
+
+
+.side__connect {
+    font-family: 'Poppins';
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #3F5839;
+    border: none;
+    outline: none;
+    color: white;
+}
