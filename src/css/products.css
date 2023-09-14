@@ -1,0 +1,68 @@
+.products__form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 3vw;
+}
+
+.products__form > span {
+    font-family: 'Poppins';
+}
+
+select {
+    width: fit-content;
+    background: #7DA075;
+    color: white;
+    font-family: 'Poppins';
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products__form > input {
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: none;
+    font-family: 'Poppins';
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.products__form > input:hover {
+    background: #7DA075;
+}
+
+
+
+.all__products__container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-rows: 400px;
+    justify-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.all__products__container > .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #7DA075;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.all__products__container > .item h1{
+    font-size: 1.4em;
+    font-weight: 100;
+}
+
+.all__products__container > .item h2{
+    font-size: 1.2em;
+}

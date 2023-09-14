@@ -59,6 +59,19 @@
     position: relative;
 }
 
+.cart__length {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
 .cart__content {
     display: grid;
     grid-auto-rows: 1fr;
@@ -122,4 +135,9 @@
     font-family: 'Poppins';
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
+    transition: all .2s ease-in;
+}
+
+.cart__content a:hover {
+    background: rgba(255,255,255, 0.6);
 }

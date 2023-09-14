@@ -5,5 +5,4 @@
     $user = new User($db);
     extract($_POST);
     $user->Login($email, $password);
-    
 ?>

@@ -8,8 +8,8 @@ class Product {
         $this->database = $db;
     }
 
-    public function getAllProduct(){
-        $allProduct = $this->database->query("SELECT * FROM products");
+    public function getAllProduct($sql){
+        $allProduct = $this->database->query($sql);
         return $allProduct;
         var_dump($allProduct);
     }
@@ -21,6 +21,7 @@ class Product {
 
     public function getProductByName($name){
         $productName = $this->database->query("SELECT * FROM products WHERE name LIKE '%$name%' ");
+        return $productName;
     }
 
     public function createProduct($name, $description, $price, $image){
@@ -28,10 +29,11 @@ class Product {
         $params = array("name" => $name, "description" => $description, "price" => $price, "image" => "");
         $createProduct = $this->database->create($sql, $params);
     }
-    public function getProductsByCategory($name){
-        $sql = "SELECT * FROM category WHERE name = '$name'";
+    
+    public function getProductsByCategory($id){
+        $sql = "SELECT * FROM products WHERE category = '$id'";
         $getProduct = $this->database->query($sql);
-        var_dump($getProduct);
+        return $getProduct;
     }
 }
 

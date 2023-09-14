@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/account.css">
     <link rel="stylesheet" href="/css/homeProducts.css">
+    <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/css/hero.css">
     <title>Accueil</title>
@@ -28,6 +29,10 @@
     $router->map('GET', '/', function() use ($db){ 
         require('./components/hero.php');
         require("./components/homeProducts.php");
+    });
+
+    $router->map('GET', '/products', function() use ($db){
+        require('./components/products.php');
     });
 
     $router->map("GET", '/signin', 'signin');
@@ -56,3 +61,33 @@
 <script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>
 <script src="./javascript/account.js"></script>
 <script src="/javascript/cart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/javascript/favorite.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".favs").click(function (e) {
+    e.preventDefault();
+    let userID = $(".favs").attr("data-userID");
+    let productID = $(this).attr("data-productID");
+    let clickedElem = $(this);
+    $.ajax({
+      url: "/process/favorite.php",
+      type: "POST",
+      data: {
+        productID: productID,
+        userID: userID,
+      },
+      dataType: "json",
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(textStatus);
+        console.log(jqXHR);
+        console.log(errorThrown);
+      },
+    });
+  });
+    })
+</script>
